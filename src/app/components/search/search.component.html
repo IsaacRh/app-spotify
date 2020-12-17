@@ -4,4 +4,10 @@
     </div>
 </div>
 <app-loading *ngIf="loading" class="m-5"></app-loading>
+<div *ngIf="error" class="alert alert-danger animated fadeIn m-5">
+  <h3>Error</h3>
+  <p>
+    {{ errorMessage }}
+  </p>
+</div>
 <app-cards [items] = "artists"></app-cards>
